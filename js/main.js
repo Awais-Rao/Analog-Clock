@@ -1,6 +1,7 @@
 /*=============== CLOCK ===============*/
 const hour = document.getElementById('clock-hour'),
       minutes = document.getElementById('clock-minutes')
+      seconds = document.getElementById('clock-seconds')
 
 const clock = () =>{
    // We get the Date object
@@ -11,10 +12,12 @@ const clock = () =>{
    // (Current minute) / 60(minutes) * 360(deg circle)
    let hh = date.getHours() / 12 * 360,
        mm = date.getMinutes() / 60 * 360
+       ss = date.getSeconds() * 6
 
    // We add a rotation to the elements
    hour.style.transform = `rotateZ(${hh + mm / 12}deg)`
    minutes.style.transform = `rotateZ(${mm}deg)`
+   seconds.style.transform = `rotateZ(${ss}deg)`
 }
 setInterval(clock, 1000) // (Updates every 1s) 1000 = 1s 
 

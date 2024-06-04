@@ -6,6 +6,7 @@
 
     /* ========== COLORS ========== */
     /* Color mode HSL(hue, saturation, lightness) */
+    --white-color: hsl(0, 0%, 100%);
     --red-color: hsl(2, 72%, 50%);
     --black-color: hsl(75, 4%, 18%);
     --text-color: hsl(75, 4%, 12%);
@@ -94,9 +95,15 @@ body{
     height: 38px;
     background-color: var(--red-color);
 }
+.clock__seconds{
+    width: 1px;
+    height: 42px;
+    background-color:  hsl(75, 4%, 18%);
+}
 
 .clock__hour,
-.clock__minutes{
+.clock__minutes,
+.clock__seconds{
     box-shadow: 0 0 6px hsla(0, 0%, 0%, 0.25);
     position: absolute;
     bottom: 50%;
@@ -169,6 +176,10 @@ body{
     .clock__rounder {
       width: 8px;
       height: 8px;
+    }
+    .clock__seconds{
+        width: 1px;
+      height: 62px;
     }
     .clock__minutes {
       width: 3px;
